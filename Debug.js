@@ -5,11 +5,9 @@ function shouldISend(wakeUpHour, sleepHour) {
   wakeUpTime.setHours(wakeUpHour);
   wakeUpTime.setMinutes(0);
 
-  console.log("Wake", wakeUpTime);
   const sleepTime = new Date();
   sleepTime.setHours(sleepHour);
   sleepTime.setMinutes(0);
-  console.log("sleep", sleepTime);
 
   if (wakeUpTime.getTime() > sleepTime.getTime()) {
     sleepTime.setDate(sleepTime.getDate() + 1);
